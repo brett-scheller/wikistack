@@ -1,22 +1,23 @@
 const html = require("html-template-tag");
 const layout = require("./layout");
 
-module.exports = () => layout(html`
+module.exports = () =>
+  layout(html`
   <h3>Add a Page</h3>
   <hr>
   <form method="POST" action="/wiki/">
 
     <div class="form-group">
-      <label for="author-name" class="col-sm-2 control-label">Author Name</label>
+      <label for="name" class="col-sm-2 control-label">Author Name</label>
       <div class="col-sm-10">
-        <input id="author-name" name="author-name" type="text" class="form-control"/>
+        <input id="name" name="name" type="text" class="form-control"/>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="author-email" class="col-sm-2 control-label">Author E-Mail</label>
+      <label for="email" class="col-sm-2 control-label">Author E-Mail</label>
       <div class="col-sm-10">
-        <input id="author-email" name="author-email" type="text" class="form-control"/>
+        <input id="email" name="email" type="text" class="form-control"/>
       </div>
     </div>
 
@@ -28,16 +29,16 @@ module.exports = () => layout(html`
     </div>
 
     <div class="form-group">
-      <label for="page-content" class="col-sm-2 control-label">Page Content</label>
+      <label for="content" class="col-sm-2 control-label">Page Content</label>
       <div class="col-sm-10">
-        <input id="page-content" name="page-content" type="text" class="form-control"/>
+        <input id="content" name="content" type="text" class="form-control"/>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="page-status" class="col-sm-2 control-label">Page Status</label>
+      <label for="status" class="col-sm-2 control-label">Page Status</label>
       <div class="col-sm-10">
-        <input id="page-status" name="page-status" type="text" class="form-control"/>
+        <input id="status" name="status" type="text" class="form-control"/>
       </div>
     </div>
 
