@@ -15,9 +15,10 @@ const app = express();
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
-  res.send(layout("<h1>Hello World</h1>"));
+  res.redirect('/wiki');
 });
 app.use("/wiki", wikiRouter);
+app.use("/users", userRouter);
 
 const init = async () => {
   await User.sync({ force: true });
